@@ -1,0 +1,55 @@
+{% extends 'base_index.html' %}
+
+{% block nav %}
+    <li role="presentation" style="width: 96px"><a href="/">主页</a></li>
+    <li role="presentation" style="width: 96px" class="active"><a href="/search">高级搜索</a></li>
+    <li role="presentation" style="width: 96px"><a href="/dataManager">数据管理</a></li>
+
+{% endblock %}
+{% block content %}
+    <div id="table" style="padding: 20px">
+        <table class="table table-striped" style="border-left: #0f0f0f 1px" align="center">
+            <tbody>
+
+
+            {% if content['len_data']!=0  %}
+                <tr>
+                    <td>ID</td>
+                    <td>部门</td>
+                    <td>商户名称</td>
+                    <td>交易金额</td>
+                    <td>交易时间</td>
+                    <td>卡余额</td>
+                    <td>入账日期</td>
+                </tr>
+
+                {% for i in content['data'] %}
+                    <tr>
+                        {% for j in i %}
+                            <td>{{ j }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+
+            {% else %}
+                <tr>
+                    <td>
+                        <center>
+                            <div class="alert alert-danger" role="alert">输入错误，请返回重新查询。</div>
+                        </center>
+                    </td>
+
+
+                </tr>
+         {%endif%}
+            </tbody>
+
+        </table>
+
+    </div>
+    <div align="center">
+        <a class="btn btn-success" href="search" role="button">返回</a>
+    </div>
+    <br style="height: 100px">
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'base_index.html' %}
+{% block nav %}
+    <li role="presentation" style="width: 96px"><a href="/">主页</a></li>
+    <li role="presentation" style="width: 96px" class="active"><a href="/search">高级搜索</a></li>
+    <li role="presentation" style="width: 96px"><a href="/dataManager">数据管理</a></li>
+{% endblock %}
+{% block content %}
+    <!-- 此处填充页面主体内容 -->
+    <div align="center" style="padding: 50px">
+
+        <div style="width: 960px;background: #d0e9c6;padding: 10px;">
+            <h3>高级搜索</h3>
+            <form class="table" action="/search_result" method="get">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <label style="height: 33px">学号： </label>
+                            <label style="height: 33px">
+                                <input type="text" class="form-control" name="stuID" style="width: 250px">
+                            </label>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label style="height: 33px">班级： </label>
+                            <label style="height: 33px">
+                                <input type="text" class="form-control" name="className" style="width: 250px">
+                            </label>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <label style="height: 33px">商店： </label>
+                            <label style="height: 33px">
+                                <input type="text" class="form-control" name="shop" style="width: 250px">
+                            </label>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <label style="height: 33px">日期： </label>
+                            <label style="height: 33px">
+                                <input type="text" class="form-control" name="postingDate" style="width: 250px">
+                            </label>
+                        </td>
+
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            <button style="height: 48px ;width:96px;" type="submit" class="btn-success">搜索</button>
+                        </td>
+
+                    </tr>
+                    </tbody>
+
+
+                </table>
+
+
+            </form>
+
+
+        </div>
+    </div>
+
+{% endblock %}

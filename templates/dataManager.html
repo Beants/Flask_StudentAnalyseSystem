@@ -1,0 +1,35 @@
+{% extends 'base_index.html' %}
+{% block nav %}
+<li role="presentation" style="width: 96px"><a href="/">主页</a></li>
+<li role="presentation" style="width: 96px"><a href="/search">高级搜索</a></li>
+<li role="presentation" style="width: 96px" class="active"><a href="/dataManager">数据管理</a></li>
+{% endblock %}
+{% block content %}
+<!-- 此处填充页面主体内容 -->
+<div align="center" style="padding: 50px;background: #ffffff">
+
+    <div class="row">
+        <div class="col-md-12"><h2>数据管理</h2></div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation" class="active">
+                    增加数据
+                </li>
+                <li role="presentation">
+                    数据统计
+                </li>
+            </ul>
+
+        </div>
+        <div class="col-md-8">.col-md-8</div>
+    </div>
+
+</div>
+
+
+{% endblock %}

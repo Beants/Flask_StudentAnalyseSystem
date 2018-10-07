@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>**消费信息分析系统</title>
+
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<table align="center" id='nav-header' class="container">
+    <tbody>
+    <tr align="center" style="height: 126px">
+        <td>
+            <h1>
+                **消费信息分析系统
+            </h1>
+        </td>
+    </tr>
+    <tr style="border-bottom: #0f0f0f 1px;width: 960px">
+        <td style="background: #b9def0" align="center">
+            <ul class="nav nav-pills" style="padding: 3px">
+                {% block nav %}
+                {% endblock %}
+
+            </ul>
+
+        </td>
+    </tr>
+    </tbody>
+
+
+</table>
+
+<div class="container" align="center" style="width: 1200px"  >
+    {% block content %}{% endblock %}
+
+</div>
+
+
+</body>
+</html>
