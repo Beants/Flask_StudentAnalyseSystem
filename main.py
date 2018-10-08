@@ -30,10 +30,12 @@ def search():
 def dataManagerStudent():
     stuID = (request.args.get('stuID'))
     if stuID == None:
-        return render_template('dataManagerStudent.html', content='search')
+        return render_template('dataManagerStudent.html', data=None)
     else:
         data, len_data = mongo.get_data_by_condition(request.args.get('stuID'))
-        return render_template('dataManagerStudent.html', content='res')
+        for i in data:
+            print(i)
+        return render_template('dataManagerStudent.html', data=data)
 
 
 @app.route('/dataManager/')
