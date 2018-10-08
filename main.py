@@ -32,10 +32,35 @@ def dataManagerStudent():
     if stuID == None:
         return render_template('dataManagerStudent.html', data=None)
     else:
+        from pyecharts import Bar
+        from pyecharts_javascripthon.api import TRANSLATOR
+        REMOTE_HOST = "https://pyecharts.github.io/assets/js"
+
+        bar = Bar("我的第一个图表", "这里是副标题")
+        bar.add(
+            "服装", ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"], [5, 20, 36, 10, 75, 90]
+        )
+
+        javascript_snippet = TRANSLATOR.translate(bar.options)
+
+
         data, len_data = mongo.get_data_by_condition(request.args.get('stuID'))
-        for i in data:
-            print(i)
-        return render_template('dataManagerStudent.html', data=data)
+        data_day = {}
+        for item in data:
+            time = str(item[4]).split(' ')
+            money = -float(item[3])
+            if time not in data_day.keys():
+                data_day[time] = money
+
+        print(len_data)
+        return render_template('dataManagerStudent.html', data=data, chart_id=bar.chart_id,
+                               host=REMOTE_HOST,
+                               renderer=bar.renderer,
+                               my_width="100%",
+                               my_height=600,
+                               custom_function=javascript_snippet.function_snippet,
+                               options=javascript_snippet.option_snippet,
+                               script_list=bar.get_js_dependencies(), )
 
 
 @app.route('/dataManager/')
