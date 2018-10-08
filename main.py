@@ -31,7 +31,8 @@ def search_result():
     request.encoding = 'utf-8'
     context = {}
     try:
-        from Flask_StudentAnalyseSystem.Manager import mongo
+
+        import mongo
         print(request.args.get('stuID'), request.args.get('className'), request.args.get('shop'),
               request.args.get('postingDate'))
 
