@@ -3,6 +3,12 @@
 <li role="presentation" style="width: 96px"><a href="/">主页</a></li>
 <li role="presentation" style="width: 96px"><a href="/search">高级搜索</a></li>
 <li role="presentation" style="width: 96px" class="active"><a href="/dataManager">数据管理</a></li>
+	<li role = "presentation" >
+		<a href = "/dataManager/student" >个人消费数据统计（按天为单位计算）</a >
+	</li >
+	<li role = "presentation" >
+		<a href = "/dataManager/class" >班级消费数据统计（按天为单位计算）</a >
+	</li >
 {% endblock %}
 {% block content %}
 <!-- 此处填充页面主体内容 -->
@@ -12,51 +18,6 @@
         <div class="col-md-12"><h2>数据管理</h2></div>
     </div>
 
-    <div class="row">
-
-        <div class="col-md-4 panel panel-default">
-            <ul class="nav nav-pills nav-tabs nav-stacked  panel-body" role="tablist">
-                <li role="presentation" class="active">
-                    <a href="">个人消费数据统计（按天为单位计算）</a>
-                </li>
-                <li role="presentation">
-                    <a href="">班级消费数据统计</a>
-                </li>
-            </ul>
-
-        </div>
-        <div class="col-md-8">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    Basic panel example
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div>
-
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a>
-            </li>
-            <li ro  le="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a>
-            </li>
-            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
-                                       data-toggle="tab">Messages</a></li>
-            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
-                                       data-toggle="tab">Settings</a></li>
-        </ul>
-
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="home">...</div>
-            <div role="tabpanel" class="tab-pane" id="profile">...</div>
-            <div role="tabpanel" class="tab-pane" id="messages">...</div>
-            <div role="tabpanel" class="tab-pane" id="settings">...</div>
-        </div>
-
-    </div>
 
 </div>
 
