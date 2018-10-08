@@ -51,5 +51,5 @@ def search_result():
     return render_template('search_result.html', content=context)
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+app.run(debug=True)
