@@ -31,7 +31,7 @@ def sive2mongo(data):
 
 
 # 通过 联合条件   查询数据，返回 list 格式
-def get_data_by_condition(_id, _className, _shop, _postingDate):
+def get_data_by_condition(_id='', _className='', _shop='', _postingDate=''):
     import pymongo
     # mongodb服务的地址和端口号
     mongo_url = "127.0.0.1:27017"

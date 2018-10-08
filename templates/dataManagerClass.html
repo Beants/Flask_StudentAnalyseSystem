@@ -3,10 +3,9 @@
 	<li role = "presentation" style = "width: 96px" ><a href = "/" >主页</a ></li >
 	<li role = "presentation" style = "width: 96px" ><a href = "/search" >高级搜索</a ></li >
 	<li role = "presentation" style = "width: 96px" ><a href = "/dataManager" >数据管理</a ></li >
-	<li role = "presentation" class = "active" >
-		<a href = "/dataManager/student" class = "active" >个人消费数据统计（按天为单位计算）</a >
-	</li >
 	<li role = "presentation" >
+		<a href = "/dataManager/student" >个人消费数据统计（按天为单位计算）</a >
+	<li role = "presentation" class = "active" >
 		<a href = "/dataManager/class" >班级消费数据统计（按天为单位计算）</a >
 	</li >
 {% endblock %}
@@ -15,21 +14,8 @@
 	<div align = "center" style = "padding: 50px;background: #ffffff" >
 
 		<div class = "row" >
-			<div class = "col-md-12" ><h2 >个人消费数据统计</h2 ></div >
-			<form class = "table col-md-12" action = "/dataManager/student" method = "get" >
-
-				<label style = "height: 33px" >学号： </label >
-				<label style = "height: 33px" >
-					<input type = "text" class = "form-control" name = "stuID" style = "width: 250px" >
-				</label >
-
-
-				<button style = "height: 33px ;width:96px;" type = "submit" class = "btn-success" >搜索
-
-				</button >
-			</form >
+			<div class = "col-md-12" ><h2 >班级消费数据统计</h2 ></div >
 		</div >
-	</div >
 
 
 	</div >

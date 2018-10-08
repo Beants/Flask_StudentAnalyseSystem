@@ -9,6 +9,7 @@
 from flask import Flask, render_template, request
 
 import config
+import mongo
 
 app = Flask(__name__)
 
@@ -25,10 +26,24 @@ def search():
     return render_template('search.html')
 
 
+@app.route('/dataManager/student', methods=["POST", "GET"])
+def dataManagerStudent():
+    stuID = (request.args.get('stuID'))
+    if stuID == None:
+        return render_template('dataManagerStudent.html', content='search')
+    else:
+        data, len_data = mongo.get_data_by_condition(request.args.get('stuID'))
+        return render_template('dataManagerStudent.html', content='res')
+
+
 @app.route('/dataManager/')
 def dataManager():
     return render_template('dataManager.html')
 
+
+@app.route('/dataManager/class')
+def dataManagerClass():
+    return render_template('dataManagerClass.html')
 
 @app.route('/search_result', methods=['GET'])
 def search_result():
