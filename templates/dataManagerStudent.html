@@ -54,7 +54,93 @@
                             }, 1000);
                         };
 					</script >
+
+				<div class = "row" >
+
 				</div >
+				<div class = "panel panel-info" >
+					<div class = "panel-heading" >
+						<h3 class = "panel-title" >分析报告</h3 >
+					</div >
+					<div class = "row panel-body" >
+						<div class = "col-md-4 " >
+							<div class = "row" >
+								<div class = "col-md-6" >
+									<p >最大消费：</p >
+								</div >
+								<div class = "col-md-6" >
+									<p >{{ data['max'] }}</p >
+								</div >
+							</div >
+						</div >
+						<div class = "col-md-4 " >
+							<div class = "row" >
+								<div class = "col-md-6" >
+									<p >最小消费：</p >
+								</div >
+								<div class = "col-md-6" >
+									<p >{{ data['min'] }}</p >
+								</div >
+							</div >
+						</div >
+						<div class = "col-md-4 " >
+							<div class = "row" >
+								<div class = "col-md-6" >
+									<p >平均消费：</p >
+								</div >
+								<div class = "col-md-6" >
+									<p >{{ data['avg'] }}</p >
+								</div >
+							</div >
+						</div >
+					</div >
+					<div class = "row panel-body" >
+						<div class = "col-md-6 " >
+							<div class = "row" >
+								<div class = "col-md-6" >
+									<p >总花费：</p >
+								</div >
+								<div class = "col-md-6" >
+									<p >{{ data['sum_out'] }}</p >
+								</div >
+							</div >
+						</div >
+						<div class = "col-md-6 " >
+							<div class = "row" >
+								<div class = "col-md-6" >
+									<p >总充值：</p >
+								</div >
+								<div class = "col-md-6" >
+									<p >{{ data['sum_in'] }}</p >
+								</div >
+							</div >
+						</div >
+					</div >
+
+					<div class = "row panel-body" >
+						<div class = "col-md-4 " >
+							<div class = "row" >
+								<div class = "col-md-8" >
+									<p >没有消费的天数：</p >
+								</div >
+								<div class = "col-md-4" >
+									<p >{{ data['no_out_days_num'] }}</p >
+								</div >
+							</div >
+						</div >
+						<div class = "col-md-8 " >
+							<div class = "row" >
+								<div class = "col-md-6" >
+									<p >分别为：</p >
+								</div >
+								<div class = "col-md-6" >
+									<p >{{ data['no_out_days'] }}</p >
+								</div >
+							</div >
+						</div >
+					</div >
+				</div >
+
 			{% endif %}
 		</div >
 	</div >
