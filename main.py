@@ -36,7 +36,7 @@ def dataManagerStudent():
         from pyecharts import Bar
         from pyecharts_javascripthon.api import TRANSLATOR
 
-        REMOTE_HOST = "https://pyecharts.github.io/assets/js"
+        REMOTE_HOST = "https://pyecha rts.github.io/assets/js"
 
         data, len_data = mongo.get_data_by_condition(request.args.get('stuID'))
         data_day_out = {}
